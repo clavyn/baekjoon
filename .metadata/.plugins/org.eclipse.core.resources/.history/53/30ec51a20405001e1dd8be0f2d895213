@@ -1,0 +1,45 @@
+package baekjoon;
+
+import java.io.IOException;
+
+
+public class Main {
+	
+	static int[] arr = {1,10,5,8,7,6,4,3,2,9}; //정렬해야 할 배열
+		
+	public static void bubbleSort(int[] array) {
+		for(int i=0; i<array.length;i++) {
+			for(int j=0;j<array.length-i-1;j++) {
+				if(array[j]>array[j+1]) {
+					swap(array,j,j+1);
+				}
+			}
+		}
+	}
+	public static void swap(int[]array,int source, int target) {
+		int tmp = array[source];
+		array[source]=array[target];
+		array[target]=tmp;
+	}
+	
+	public static void printArray(int[] array) {
+		for(int data:array) {
+			System.out.print(data+" ");
+		}
+		System.out.println();
+	}
+		
+	public static void main(String[] args) throws IOException{
+		printArray(arr);
+		bubbleSort(arr);
+		System.err.println("정렬후");
+		printArray(arr);
+		
+		
+	}
+	
+	
+	
+	
+
+}
