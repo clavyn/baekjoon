@@ -1,0 +1,47 @@
+package baekjoon;
+
+import java.io.IOException;
+import java.util.Stack;
+
+public class Main {
+
+	static boolean solution(String s) {
+		boolean answer = false;
+		
+		Stack<Character> stk = new Stack<>();
+		if (s.length() % 2 != 0 || s.charAt(0) == ')')
+			return answer;
+
+		for (int i = 0; i < s.length(); i++) {
+			stk.push(s.charAt(i));
+		}
+		int i = 0;
+		while (i==stk.size()/2) {
+			for (i = 0; i < stk.size(); i++) {
+				if (stk.peek() == '(') {
+					stk.set(i,null);
+					for (int j = stk.size()-1; j >=0; j--) {
+						if (stk.peek() == ')') {
+							stk.set(j,null);
+						}
+					}
+				}
+			
+			}
+		
+			
+		}
+		System.out.println(stk);
+		if(stk.pop()!=null) {
+			return false;
+		}else return true;
+
+	
+
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		System.out.println(solution("()()"));
+	}
+}

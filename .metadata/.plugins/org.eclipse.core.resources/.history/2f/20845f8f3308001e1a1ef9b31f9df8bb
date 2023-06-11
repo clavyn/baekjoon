@@ -1,0 +1,46 @@
+package baekjoon;
+
+import java.io.IOException;
+
+public class Main {
+
+	 static String solution(String s) {
+	     String[] arr = s.split(" ");
+	     String tmp = "";
+	     
+	     int temp;
+	     StringBuilder sb = null;
+	     for(int i = 0; i<arr.length; i++) {
+	    	 tmp = arr[i];//단어	   
+	    	 sb = new StringBuilder(tmp);
+	    	 for(int j = 0 ; j<arr[i].length();j++) {
+	    		 if(j==0) {
+	    			 temp=(byte)tmp.charAt(j);
+	    			 if(64<temp&&temp<97) {
+	    				 tmp.charAt(j)=(char)(temp+32);
+	    			 }
+	    		 }else {
+	    			 temp=(byte)tmp.charAt(j);
+	    			 if(96<temp&&temp<123) {
+	    				 temp.charAt
+	    			 }
+	    		 }
+	    	 }
+	     }
+		 
+		 String answer = "";
+	        return answer;
+	    }
+
+	public static void main(String[] args) throws IOException {
+			
+		char a = 'a';
+		char aa = '3';
+		
+		System.out.println((byte)aa);
+
+		
+		
+//		System.out.println(solution("3people unFollowed me"));65-122가 영문자
+	}
+}

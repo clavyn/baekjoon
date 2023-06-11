@@ -1,0 +1,35 @@
+package baekjoon;
+
+import java.util.Stack;
+
+public class Main {
+
+	static int solution(String s) {
+		int answer = -1;
+		char[] tmp = s.toCharArray();
+		Stack<Character> stk = new Stack<>();
+		stk.push(tmp[0]);
+		System.out.println(stk);
+		for (int i = 1; i < tmp.length; i++) {
+			System.out.println(i);
+			if (stk.peek()==tmp[i]) {
+				stk.pop();
+			}else {
+				stk.push(tmp[i]);
+			}
+
+		}
+		if (stk.size() == 0)
+			answer = 1;
+		else
+			answer = 0;
+
+		return answer;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(solution("baabaa"));
+
+	}
+}

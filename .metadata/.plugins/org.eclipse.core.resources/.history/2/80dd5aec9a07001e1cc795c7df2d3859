@@ -1,0 +1,28 @@
+package baekjoon;
+
+import java.io.IOException;
+import java.util.Stack;
+
+public class Main {
+
+	static boolean solution(String s) {
+
+		Stack<Character> stk = new Stack<>();
+
+		for (int i = 0; i <s.length(); i++) {
+			if(s.charAt(i)=='('){
+				stk.push('(');				
+			}else {
+				stk.pop();
+			}
+		}
+		
+		return stk.isEmpty();
+
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		System.out.println(solution(")()("));
+	}
+}
