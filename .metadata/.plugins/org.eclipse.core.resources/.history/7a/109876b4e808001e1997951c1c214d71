@@ -1,0 +1,35 @@
+package baekjoon;
+
+import java.util.Stack;
+
+public class Main {
+
+	static int solution(int []arr) {
+        int[] answer = {};
+        Stack<Integer> stk = new Stack<>();
+        for(int i = 0 ; i<arr.length;i++) {
+        	if(stk.isEmpty()) {
+        		stk.push(arr[i]);
+        		System.out.println(i);
+        	}else {
+        		if(stk.peek()==arr[i]) {
+        			System.out.println("else의 "+i);
+        			continue;
+        		}else {
+        			stk.push(arr[i]);
+        		}
+        	}
+        }
+        
+        System.out.println(stk.toString());
+
+        return 1;
+    }
+
+	public static void main(String[] args) {
+		
+		int [] arr = {1,1,3,3,0,1,1};
+		System.out.println(solution(arr));
+
+	}
+}
