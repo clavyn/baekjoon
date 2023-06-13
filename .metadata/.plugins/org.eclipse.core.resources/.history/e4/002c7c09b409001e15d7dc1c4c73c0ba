@@ -1,0 +1,32 @@
+package baekjoon;
+
+import java.util.Arrays;
+import java.util.Stack;
+
+public class Main {
+
+	static int solution(int n) {
+		int answer = 0;
+		int[] e = new int [n+1];
+		int hap=0;
+		for(int i = 0 ; i < e.length ; i++) {
+				hap = e[i];
+				System.out.println(hap);
+			for(int j = i+1 ; j<e.length ;j++) {
+				hap+=e[j];
+				if(hap==15) {
+					answer++;
+					break;
+				}
+			}
+		}
+		
+		return answer;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(solution(15));
+
+	}
+}

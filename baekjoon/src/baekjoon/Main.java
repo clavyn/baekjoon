@@ -5,31 +5,27 @@ import java.util.Stack;
 
 public class Main {
 
-	static int[] solution(int[] arr) {
-		int[] answer = {};
-		Stack<Integer> stk = new Stack<>();
-		for (int i = 0; i < arr.length; i++) {
-			if (stk.isEmpty()) {
-				stk.push(arr[i]);
-			} else {
-				if (stk.peek() == arr[i]) {
-					continue;
-				} else {
-					stk.push(arr[i]);
-				}
-			}
+	static int solution(int n) {
+		int f1 = 0;
+		int f2 = 1;
+		
+		while(f1+f2==n) {
+			System.out.println(f1);
+			System.out.println(f2);
+			f1=f2;
+			f2=f1+f2;	
 		}
-		answer = new int[stk.size()];
-		for(int i = stk.size()-1;i>=0;i--) {
-			answer[i]=stk.pop();
-		}
-		return answer;
+			
+			
+		
+		
+		return (f1+f2)%1234567;
+		
 	}
 
 	public static void main(String[] args) {
 
-		int[] arr = { 4, 4, 4, 3, 3 };
-		System.out.println(Arrays.toString(solution(arr)));
+		System.out.println(solution(5));
 
 	}
 }
