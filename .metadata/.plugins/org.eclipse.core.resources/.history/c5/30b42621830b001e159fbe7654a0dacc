@@ -12,7 +12,9 @@ public class Main {
 			answer[i]=x;
 			x=x+y;
 		}
-	
+		
+		
+		
 		return answer;
 		
 	}

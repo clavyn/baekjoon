@@ -12,7 +12,9 @@ public class Main {
 			answer[i]=x;
 			x=x+y;
 		}
-	
+		
+		
+		
 		return answer;
 		
 	}
@@ -21,7 +23,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println(Arrays.toString(solution(4,3)));
+		System.out.println(Arrays.toString(solution(2,5)));
 
 	}
 }

@@ -6,13 +6,14 @@ import java.util.Stack;
 public class Main {
 
 	static long[] solution(int x, int n) {
-		int y = x;
 		long[] answer = new long[n];
 		for(int i = 0;i<n;i++) {
 			answer[i]=x;
-			x=x+y;
+			x=x+x;
 		}
-	
+		
+		
+		
 		return answer;
 		
 	}
@@ -21,7 +22,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println(Arrays.toString(solution(4,3)));
+		System.out.println(Arrays.toString(solution(2,5)));
 
 	}
 }
