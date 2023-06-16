@@ -1,6 +1,6 @@
 package baekjoon;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
 		 	int[] answer = new int[str.length()];
 	        int idx=answer.length-1;
 	        for(int i = 0 ; i<answer.length; i++) {
-	        	answer[i] = Integer.parseInt(str.charAt(idx)+"");
+	        	answer[i] = str.charAt(idx);
 	        	idx--;
 	        }
 	        
@@ -20,7 +20,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println(Arrays.toString(solution(12345)));
+		System.out.println(solution(12345));
 
 	}
 }

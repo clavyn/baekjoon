@@ -1,18 +1,16 @@
 package baekjoon;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class Main {
 
 	 static int[] solution(long n) {
 		 	String str = String.valueOf(n);
-		 	int[] answer = new int[str.length()];
-	        int idx=answer.length-1;
-	        for(int i = 0 ; i<answer.length; i++) {
-	        	answer[i] = Integer.parseInt(str.charAt(idx)+"");
-	        	idx--;
+	        int[] answer = new int[str.length()];
+	        for(int i = str.length()-1; i<=0;i--) {
+	        	answer[i]=str.charAt(i);
 	        }
-	        
 	        return answer;
 	    }
 	
