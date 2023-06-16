@@ -17,7 +17,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(solution("01033334444"));
+		System.out.println(solution("027778888"));
 
 	}
 }
