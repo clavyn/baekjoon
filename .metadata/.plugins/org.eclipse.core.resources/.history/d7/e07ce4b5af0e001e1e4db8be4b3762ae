@@ -1,0 +1,22 @@
+package baekjoon;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main {
+
+	static int solution(int[] arr) {
+		int answer =0;
+		for(int hap : arr) {
+			answer+=hap;
+		}
+		return 45-answer;
+	
+	}
+
+	public static void main(String[] args) {
+		int[] arr = {5,8,4,0,6,7,9};
+		System.out.println(solution(arr));
+
+	}
+}

@@ -4,30 +4,18 @@ import java.util.Arrays;
 
 public class Main {
 
-	static boolean solution(int x) {
-		
-		String tmp = x+"";
-		int len = tmp.length();
-		int[] arr = new int[len];
-		int hap = 0;
-		
-		for(int i = 0 ; i < len ; i++) {
-			arr[i]=tmp.charAt(i)-'0';
-			hap+=arr[i];
+	static int solution(int left, int right) {
+		int answer = 0;
+
+		for (int i = left; i <= right; i++) {
+			answer += (Math.sqrt(i) % 1 == 0)? -1 * i : i;
 		}
-	
-		
-		
-		
-		
-		System.out.println(hap);
-		return x%hap==0;
-		
-		
+
+		return answer;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(solution(13));
+		System.out.println(solution(24, 27));
 
 	}
 }
