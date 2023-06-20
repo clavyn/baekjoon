@@ -13,14 +13,14 @@ public class Main {
 			if('0'<arr[i]&&arr[i]<'9') {
 				cnt++;
 			}
+		
 		}
-		System.out.println(cnt);
-		System.out.println(arr.length);
+
 		return cnt==arr.length;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(solution("1234"));
+		System.out.println(solution("a234"));
 
 	}
 }

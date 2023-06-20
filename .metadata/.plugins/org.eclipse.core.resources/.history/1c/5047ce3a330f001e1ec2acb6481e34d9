@@ -1,0 +1,24 @@
+package baekjoon;
+
+import java.util.Arrays;
+
+public class Main {
+
+	static long solution(int price, int money, int count) {
+		long answer = money;
+		
+		for(int i = 1; i<=count ; i++) {
+		
+			price+=(price*i);
+			
+		}
+		
+		System.out.println(price);
+		return price - answer;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(solution(3,20,4));
+
+	}
+}
