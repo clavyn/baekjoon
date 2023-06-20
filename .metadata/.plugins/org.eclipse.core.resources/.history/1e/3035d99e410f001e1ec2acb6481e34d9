@@ -9,7 +9,7 @@ public class Main {
         		
 		int[][] answer = new int [len][len];
         for(int i = 0 ; i < len;i++) {
-        	for(int j = 0 ; j < arr1[i].length ; j++) {
+        	for(int j = 0 ; j < len ; j++) {
         		answer[i][j]= arr1[i][j]+arr2[i][j];        	
         		}
         }

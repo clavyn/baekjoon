@@ -5,11 +5,15 @@ import java.util.Arrays;
 public class Main {
 
 	static int[][] solution(int[][] arr1, int[][] arr2) {
-        int len = arr1.length;
+        int len = arr1[1].length;
         		
 		int[][] answer = new int [len][len];
         for(int i = 0 ; i < len;i++) {
-        	for(int j = 0 ; j < arr1[i].length ; j++) {
+        	for(int j = 0 ; j < len ; j++) {
+        		System.out.println(len);
+        		System.out.println("i: "+i);
+        		System.out.println(j);
+        		
         		answer[i][j]= arr1[i][j]+arr2[i][j];        	
         		}
         }
