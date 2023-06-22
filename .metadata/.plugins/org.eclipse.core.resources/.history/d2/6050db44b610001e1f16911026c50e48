@@ -1,0 +1,28 @@
+package baekjoon;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+
+	static int solution (int n) {
+		int answer = 0 ;
+		Queue<Integer>queue = new LinkedList<>();
+		System.out.println(45%3);
+		while(n%3>1) {
+			queue.add(n%3);//n을 3으로 나눈 나머지
+			n/=3;//n은 3으로 나누어진 몫으로 초기화
+		}
+		for(int i = 1 ; i<queue.size() ; i*=3) {
+			answer+=queue.poll() * i;
+		}
+		
+		return answer;
+	}
+	
+
+	public static void main(String[] args) {
+		
+		System.out.println(solution(45));
+	}
+}
