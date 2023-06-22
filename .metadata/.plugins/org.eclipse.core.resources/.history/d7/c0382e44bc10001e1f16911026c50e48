@@ -1,0 +1,27 @@
+package baekjoon;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	static int[] solution (int n, int m) {
+		int [] answer = new int [2];
+		ArrayList<Integer> n_arr  = new ArrayList<>();
+		ArrayList<Integer> m_arr  = new ArrayList<>();		
+				
+		for(double i = 1 ; i <= n ; i++) {
+			if((n/i)%1==0) {				
+				n_arr.add((int)i);
+			}
+		}
+		System.out.println("n_arr: "+n_arr);
+		return answer;
+		
+	}
+	
+
+	public static void main(String[] args) {
+		System.out.println(solution(3,12)); //[3, 12]
+		System.out.println(solution(1,10)); //[1, 10]
+	}
+}

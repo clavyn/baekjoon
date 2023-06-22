@@ -1,28 +1,38 @@
 package baekjoon;
 
-import java.util.Stack;
+import java.util.Arrays;
 
 public class Main {
 
-	static int solution (int n) {
-		int answer = 0 ;
-		int i = 1;
-		Stack<Integer>stk = new Stack<>();
-		while(n>0) {
-			stk.add(n%3);//n을 3으로 나눈 나머지
-			n/=3;//n은 3으로 나누어진 몫으로 초기화			
-		}
-		while(!stk.isEmpty()) {
-			answer+=stk.pop()*i;			
-			i*=3;
-		}
-		
+	static int[] solution(String s) {
+		int[] answer = new int[2];
+		int zeroCnt = 0;
+		int twoCnt = 0;
+
+		while(!s.equals("1")) {
+			int oneCnt=0;
+			for (int i = 0; i < s.length(); i++) {
+				if (s.charAt(i) == '1') {
+					oneCnt++;
+				} else {
+					zeroCnt++;
+				}
+			}
+
+			twoCnt++;
+
+			s = Integer.toBinaryString(oneCnt);
+			System.out.println("s : "+s);
+			
+		} 
+
+		answer[0] = twoCnt;
+		answer[1] = zeroCnt;
 		return answer;
+
 	}
-	
 
 	public static void main(String[] args) {
-		
-		System.out.println(solution(1));
+		System.out.println(Arrays.toString(solution("01110")));
 	}
 }
