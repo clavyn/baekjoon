@@ -1,0 +1,28 @@
+package baekjoon;
+
+import java.util.Arrays;
+
+public class Main {
+
+	static String solution(String s , int n) {
+		String answer="";
+		char [] arr = s.toCharArray();
+		for(int i = 0; i< arr.length ; i++) {
+			if(arr[i]==' ') {
+				answer+= ' ';
+				continue;
+				}
+			answer += (char)(arr[i]+1); 
+		}
+		
+		return answer;
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(solution("AB", 1));
+		System.out.println(solution("a B z", 4));
+
+	}
+}
