@@ -1,0 +1,27 @@
+package baekjoon;
+
+
+public class Main {
+
+	static String[] solution(int n, int[]arr1,int[]arr2) {
+		int answer = 0;
+		String tmp = "";
+		Long lp = Long.valueOf(p);
+		for(int i = 0 ; i < t.length() - p.length() +1 ; i++) {
+			tmp=t.substring(i, i+p.length());
+			if(Long.valueOf(tmp)<=lp) answer++;	
+		}
+		
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		int[][] arr1 = {};
+		int[][] arr2 = {};
+		
+		System.out.println(solution(5,arr1,arr2));
+
+
+
+	}
+}
