@@ -4,6 +4,7 @@ package baekjoon;
 public class Main {
 
 	static int solution(int[][] sizes) {
+		int answer = 0 ;
 		int len = sizes.length;
 		int tmp = 0;
 		int weight = 0;
