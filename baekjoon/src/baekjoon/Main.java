@@ -1,32 +1,24 @@
 package baekjoon;
 
-import java.util.Arrays;
-
 public class Main {
 
-	static String[] solution(String[] strings, int n) {
-		String tmp;
-		Arrays.sort(strings);
-		for(int i = 0 ; i < strings.length ; i++) {
-			for(int j = 0 ; j < strings.length-1; j++) {
-				if(strings[j].charAt(n)>strings[j+1].charAt(n)) {
-					tmp=strings[j];
-					strings[j]=strings[j+1];
-					strings[j+1] = tmp;
-				}
-			}
+	static long solution(int num) {
+		long[] array = new long[num + 1]; // 인덱스는 0부터 시작하니까 크기를 지정할때 num+1로
+		array[0] = 0;
+		array[1] = 1;
+
+		for (int i = 2; i <= num; i++) {
+			array[i] = array[i - 1] + array[i - 2];
+
 		}
-		return strings;
-		
-		
+
+		return array[num];
+
 	}
 
 	public static void main(String[] args) {
 
-		String [] strings = {"sun","bed","car"};
-		String [] string = {"abce", "abcd", "cdx"};
-		System.out.println(Arrays.toString(solution(string,2)));
-		System.out.println(Arrays.toString(solution(strings,1)));
+		System.out.println(solution(5));
 
 	}
 }

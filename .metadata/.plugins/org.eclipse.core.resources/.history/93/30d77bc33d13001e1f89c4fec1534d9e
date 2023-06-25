@@ -1,0 +1,29 @@
+package baekjoon;
+
+
+public class Main {
+
+	static int solution(int n) {
+		long hap1 = 0 ;
+		long hap2 = 0 ;
+		
+		for(int i = 0 ; i < n-1 ; i++) {
+			hap1+=i;
+		}
+		for(int i = 0 ; i < n-2 ; i++) {
+			hap2+=i;
+		}
+		long hap = hap1+hap2;
+		
+		return (int)(hap%1234567);
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+
+		System.out.println(solution(5));
+
+	}
+}
