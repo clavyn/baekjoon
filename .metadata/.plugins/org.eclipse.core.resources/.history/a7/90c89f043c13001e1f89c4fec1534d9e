@@ -23,10 +23,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String [] strings = {"sun","bed","car"};
+//		String [] strings = {"sun","bed","car"};
 		String [] string = {"abce", "abcd", "cdx"};
 		System.out.println(Arrays.toString(solution(string,2)));
-		System.out.println(Arrays.toString(solution(strings,1)));
+//		System.out.println(Arrays.toString(solution(strings,1)));
 
 	}
 }
