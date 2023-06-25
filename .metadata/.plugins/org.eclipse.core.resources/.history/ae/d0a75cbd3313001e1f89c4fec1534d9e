@@ -1,0 +1,69 @@
+package baekjoon;
+
+import java.util.Arrays;
+
+
+public class Main {
+
+	static String[] solution(int n, int[] arr1, int[] arr2) {
+		String[] answer = new String[n];
+		String tmp = "";
+		String binaryTmp = "";
+		int len = 0;
+		
+		String[] temp1 = new String[n];
+		String[] temp2 = new String[n];
+		for (int i = 0; i < n; i++) {			
+			binaryTmp=Integer.toBinaryString(arr1[i]);
+			if(binaryTmp.length()<n) {
+				len=binaryTmp.length();
+				binaryTmp="";
+				for(int j = 0 ; j < n-len ; j++) {					
+					binaryTmp+="0";
+				}
+				binaryTmp+=Integer.toBinaryString(arr1[i]);
+			}
+			temp1[i]=binaryTmp;
+		}
+		for (int i = 0; i < n; i++) {			
+			binaryTmp=Integer.toBinaryString(arr2[i]);
+			if(binaryTmp.length()<n) {
+				len=binaryTmp.length();
+				binaryTmp="";
+				for(int j = 0 ; j < n-len ; j++) {					
+					binaryTmp+="0";
+				}
+				binaryTmp+=Integer.toBinaryString(arr2[i]);
+			}
+			temp2[i]=binaryTmp;
+		}
+
+		System.out.println(Arrays.toString(temp1));
+		System.out.println(Arrays.toString(temp2));
+	
+
+		
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < temp1[i].length(); j++) {
+
+				if (temp1[i].charAt(j) == '1' || temp2[i].charAt(j) == '1') {
+					tmp += '#';
+				} else {
+					tmp += ' ';
+				}
+			}
+			answer[i] = tmp;
+			tmp = "";
+		}
+
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		int[] arr1 = { 9, 20, 28, 18, 11 };
+		int[] arr2 = { 30, 1, 21, 17, 28 };
+
+		System.out.println(Arrays.toString(solution(5, arr1, arr2)));
+
+	}
+}
