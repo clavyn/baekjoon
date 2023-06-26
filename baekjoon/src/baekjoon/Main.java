@@ -1,18 +1,25 @@
 package baekjoon;
 
+import java.util.Arrays;
+
 public class Main {
 
-	static long solution(int num) {
-		long[] array = new long[num + 1]; // 인덱스는 0부터 시작하니까 크기를 지정할때 num+1로
-		array[0] = 0;
-		array[1] = 1;
-
-		for (int i = 2; i <= num; i++) {
-			array[i] = array[i - 1] + array[i - 2];
-
+	static  int[] solution(int[] array, int[][] commands) {
+		int [] answer= new int [commands.length];
+		int [] tmp;
+		int idx = 0;
+		for(int i = 0; i<commands.length ; i++) {
+			idx=0;
+			tmp=new int [commands[i][1] - commands[i][0]+1];
+			for(int j = commands[i][0]-1;j<commands[i][1];j++) {
+				tmp[idx]=array[j];
+				idx++;				
+			}
+			Arrays.sort(tmp);			
+			answer[i]=tmp[commands[i][2]-1];
 		}
-
-		return array[num];
+		
+		return answer;
 
 	}
 
