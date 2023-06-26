@@ -12,7 +12,7 @@ public class Main {
 		int tmp = 0;
 		for(int i = 0 ; i<numbers.length;i++) {
 				tmp=numbers[i];
-			for(int j = i+1 ; j < numbers.length ; j++) {
+			for(int j = 0 ; j < numbers.length-i ; j++) {
 				if(!arr.contains(tmp+numbers[j])) {
 				arr.add(tmp+numbers[j]);
 				}
