@@ -1,39 +1,33 @@
 package baekjoon;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.Stack;
 
 public class Main {
 
-	static int[] solution(int[] numbers) {
-		int[] answer;
-		ArrayList<Integer> arr = new ArrayList<>();
-		int tmp = 0;
-		for(int i = 0 ; i<numbers.length;i++) {
-				tmp=numbers[i];
-			for(int j = i+1 ; j < numbers.length ; j++) {
-				if(!arr.contains(tmp+numbers[j])) {
-				arr.add(tmp+numbers[j]);
+	static int solution(String s) {
+		int answer = 0;
+		Stack<Character> stk = new Stack<>();
+		stk.push(s.charAt(0));
+		for (int i = 1; i < s.length(); i++) {
+			if (!stk.isEmpty()) {
+				if (stk.peek() == s.charAt(i)) {
+					stk.pop();
+					continue;
+				} else {
+					stk.push(s.charAt(i));
 				}
+			} else {
+				stk.push(s.charAt(i));
 			}
 		}
-		
-		Collections.sort(arr);
-		answer = new int [arr.size()];
-		for(int i = 0 ; i < arr.size(); i++) {
-			answer[i]=arr.get(i);
-		}
-		
+		answer = stk.isEmpty() ? 1 : 0;
 		return answer;
 
 	}
 
 	public static void main(String[] args) {
-		int [] numbers = {2,1,3,4,1};
-		System.out.println(Arrays.toString(solution(numbers)));
-		int [] number = {5,0,2,7};
-		System.out.println(Arrays.toString(solution(number)));
+		System.out.println(solution("baabaa"));// 1
+		System.out.println(solution("cdcd"));// 0
 
 	}
 }
