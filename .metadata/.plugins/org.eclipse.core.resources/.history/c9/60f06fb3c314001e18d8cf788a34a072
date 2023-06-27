@@ -5,18 +5,15 @@ public class Main {
 
 	static String solution(int[] food) {
 		String answer = "";
+		int cnt = 0 ;
 		for(int i = 1 ; i < food.length ; i++) {
-			for(int j = 0; j<food[i]/2;j++) {
-				answer+=i;
+			cnt=0;
+			while(cnt==food[i]/2) {
+				answer+=i+1;
+				cnt++;
 			}
 		}
-		answer+="0";
 		
-		for(int i = food.length-1 ; i > 0 ; i--) {
-			for(int j = 0; j<food[i]/2;j++) {
-				answer+=i;
-			}
-		}
 		return answer;
 
 	}
@@ -27,7 +24,6 @@ public class Main {
 		int [] foods = {1,7,1,2};
 		//111303111
 		System.out.println(solution(food));// 0
-		System.out.println(solution(foods));// 0
 
 	}
 }
