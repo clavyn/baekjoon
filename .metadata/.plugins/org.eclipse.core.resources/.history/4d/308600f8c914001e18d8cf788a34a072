@@ -11,10 +11,11 @@ public class Main {
 		for(int i = 1 ; i < answer.length ; i++) {
 			for(int j = i-1 ; j>=0; j--) {
 				if(tmp[j]==tmp[i]) {
+					System.out.println(i+"번째 값은"+tmp[i]+"이고, j는"+j);
 					answer[i]=i-j;
 					break;
 				}
-				if(j==0) {
+				if(j==1) {
 					answer[i]=-1;
 				}
 			}
@@ -28,7 +29,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		System.out.println(Arrays.toString(solution("banana")));// [-1,-1,-1,2,2,2]
-		System.out.println(Arrays.toString(solution("foobar")));// [-1, -1, 1, -1, -1, -1]
+		//System.out.println(Arrays.toString(solution("foobar")));// [-1, -1, 1, -1, -1, -1]
 
 	}
 }

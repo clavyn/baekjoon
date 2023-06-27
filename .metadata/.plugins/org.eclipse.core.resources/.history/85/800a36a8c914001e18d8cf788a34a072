@@ -9,12 +9,13 @@ public class Main {
 		answer[0]=-1;
 		char[] tmp = s.toCharArray();
 		for(int i = 1 ; i < answer.length ; i++) {
-			for(int j = i-1 ; j>=0; j--) {
+			for(int j = 0 ; j<i; j++) {
 				if(tmp[j]==tmp[i]) {
+					System.out.println(i+"번째"+tmp[i]+"j는"+j);
 					answer[i]=i-j;
 					break;
 				}
-				if(j==0) {
+				if(j==i-1) {
 					answer[i]=-1;
 				}
 			}
