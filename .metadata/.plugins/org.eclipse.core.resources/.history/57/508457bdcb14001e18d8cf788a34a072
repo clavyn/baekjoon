@@ -1,0 +1,17 @@
+package baekjoon;
+
+import java.util.Arrays;
+
+public class Main {
+
+	static int[] solution(String[] name, int[] yearning, String[][] photo) {
+		int[] answer = new int [photo.length];
+	
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		String[] name= {"may", "kein", "kain", "radi"};
+		
+	}
+}
