@@ -24,6 +24,12 @@ public class Main {
 				Arrays.sort(tmp);
 				System.out.println(Arrays.toString(tmp));
 			}
+			if(tmp[0]==-1) {
+				while(tmp[0]==-1){
+					tmp[0]=tmp[cnt];
+					cnt++;
+				}
+			}
 			answer[i] = tmp[0];
 
 		}
