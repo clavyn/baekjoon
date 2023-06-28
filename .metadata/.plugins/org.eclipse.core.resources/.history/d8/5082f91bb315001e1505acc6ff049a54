@@ -1,0 +1,34 @@
+package baekjoon;
+
+import java.util.HashMap;
+
+public class Main {
+
+	static int solution(int[] nums) {
+		int gets = nums.length;
+		HashMap<Integer, Integer>map = new HashMap<>();
+		for(int i = 0 ; i <nums.length ; i++) {
+			map.put(nums[i], 1);
+		}
+		
+		//종류는 세개, 갖고갈 수 있는 동물 수는 두개일때
+		//종류는 두개, 갖고 갈 수 있는 동물 수는 한 개
+		//이 때 종류는 map.size이고 갖고갈 수 있는 동물의 수는 gets(배열 길이)이다.
+		if(map.size()>=gets) return gets;
+		else return  map.size();
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+		int[] nums = {3,3,3,2,2,4};
+		int[] num = {3,3,3,2,2,2};
+		int [] tmp = {3,1,2,3};
+		System.out.println(solution(nums));//3
+		System.out.println(solution(num));//2
+		System.out.println(solution(tmp));//2
+	
+
+	}
+}
