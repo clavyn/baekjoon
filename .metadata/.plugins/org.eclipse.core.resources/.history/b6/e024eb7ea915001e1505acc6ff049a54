@@ -11,10 +11,11 @@ public class Main {
 		int big = 0;
 		int small = 0;
 		for (int i = 1; i <= yellow; i++) {
-			if (((yellow / (double)i)) % 1 == 0.0) {
+			if ((yellow / i) % 1 == 0) {
 				big = yellow / i;
 				small = i;
 				if ((big + small) * 2 + 4 == brown) {
+					System.out.println(i);
 					if (big + 2 < small + 2) {
 						continue;
 					} else {
@@ -37,7 +38,7 @@ public class Main {
 //
 //		System.out.println(Arrays.toString(solution(10, 2)));
 //		System.out.println(Arrays.toString(solution(8, 1)));
-		System.out.println(Arrays.toString(solution(50, 22)));//[5,5]
+		System.out.println(Arrays.toString(solution(16, 9)));//[5,5]
 	
 
 	}
