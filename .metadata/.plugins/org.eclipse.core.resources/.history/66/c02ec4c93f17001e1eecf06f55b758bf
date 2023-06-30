@@ -1,0 +1,22 @@
+package baekjoon;
+
+import java.util.HashMap;
+
+public class Main {
+
+	static String solution(int a, int b) {
+		String answer = "";
+		int[] arr = {31,29,31,30,31,30,31,31,30,31,30,31};
+		String [] str = {"MON","TUE","WED","THU","FRI","SAT","SUN"};
+		HashMap<Integer, String>hmap = new HashMap<Integer, String>();
+		int tmp=b%7;
+		
+		System.out.println(tmp);
+		return tmp%7+"";
+
+	}
+
+	public static void main(String[] args) {
+		System.out.println(solution(5, 24));// "TUE"
+	}
+}
