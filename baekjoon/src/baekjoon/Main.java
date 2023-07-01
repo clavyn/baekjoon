@@ -1,23 +1,30 @@
 package baekjoon;
 
+import java.util.Arrays;
+
 public class Main {
 
-	static String solution(int a, int b) {
-		String answer = "";
-		int[] arr = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-		String[] str = { "FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU" };
-		int hap = b;
-		for (int i = 0; i < a-1; i++) {
-			hap += arr[i];
+	static int solution(int [] people, int limit) {
+		int answer = 0;
+		int min = 0;
+		Arrays.sort(people);
+		for(int i = people.length -1 ; min <= i; i--) {
+			if(people[min] + people[i]<=limit) min ++;
+			answer++;
+				
+			
 		}
-
-		return str[hap % 7-1];
+		
+		
+		
+		return answer;
 
 	}
 
 	public static void main(String[] args) {
-		System.out.println(solution(5, 24));// "TUE"
-		System.out.println(solution(1, 11));// "TUE"
-		System.out.println(solution(2, 28));// "TUE"
+		
+		int[] people = {70,50,80,50};
+		System.out.println(solution(people, 100));//3
+
 	}
 }
