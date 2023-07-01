@@ -19,9 +19,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-//		int[] score = { 4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2 };
-		int[] score = { 1, 2, 3, 1, 2, 3, 1};
-		System.out.println(solution(3,4, score));// 3
+		int[] score = { 4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2 };
+		System.out.println(solution(4, 3, score));// 3
 
 	}
 }
