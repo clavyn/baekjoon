@@ -20,7 +20,7 @@ public class Main {
 		int max = score[0];
 		for(int i = 1; i <=2; i++) {
 			if(max<score[i])max=score[i];
-		}  
+		} 
 		ArrayList<Integer> alist = new ArrayList<>();
 		for(int i = 0 ; i<score.length; i++) {
 			if(score[i]==max)alist.add(i+1);
