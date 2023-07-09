@@ -40,7 +40,7 @@ public class Main {
 
 	}
 
-	public static void main(String[] args) { 
+	public static void main(String[] args) {
 
 		int[] score = { 1, 2, 3, 4, 5 };
 		System.out.println(Arrays.toString(solution(score)));// 3
