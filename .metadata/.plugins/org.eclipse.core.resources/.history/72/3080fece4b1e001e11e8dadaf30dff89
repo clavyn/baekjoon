@@ -17,7 +17,7 @@ public class Main {
 				score[0]++;  
 			if (answers[i] == two[i % 8])
 				score[1]++;
-			if (answers[i] == three[i % 10]) 
+			if (answers[i] == three[i % 10])
 				score[2]++;
 		}
 		int max = score[0];
