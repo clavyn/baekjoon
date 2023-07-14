@@ -20,7 +20,7 @@ public class Main {
 			if (answers[i] == three[i % 10]) 
 				score[2]++; 
 		}   
-		int max = score[0];
+		int max = score[0]; 
 		for (int i = 1; i <= 2; i++) {
 			if (max < score[i])
 				max = score[i]; 
